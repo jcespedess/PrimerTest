@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <title>Mi primera app vue </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+
+    <body>
+        <h1>Documento html</h1>
+
+        <div id="miApp">
+            {{mensaje}}
+        </div>
+
+        <script>
+            new Vue({
+                el:'#miApp',
+                data:{
+                    mensaje:'Hola Mundo'
+                }
+            })
+        </script>
+
+
+    </body>
+
+</head>
+
+</html>
