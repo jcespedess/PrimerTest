@@ -1,28 +1,28 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Este archivo proporciona orientación a Claude Code (claude.ai/code) para trabajar con el código de este repositorio.
 
-## Project Overview
+## Descripción del Proyecto
 
-This is a minimal static web project used as a learning exercise for Git and Vue.js basics. There are no build tools, package managers, or test frameworks — it runs directly in a browser.
+Es un proyecto web estático mínimo usado como ejercicio de aprendizaje de Git y Vue.js básico. No tiene herramientas de construcción, gestores de paquetes ni frameworks de pruebas — se ejecuta directamente en el navegador.
 
-## File Structure
+## Estructura de Archivos
 
-- `index.html` — Entry point. Loads Vue.js 2.5.17 via CDN and mounts a Vue instance on `#miApp`.
-- `app.js` — Standalone JS file with a console log; currently not linked from `index.html`.
-- `style.css` — Empty stylesheet; not yet linked from `index.html`.
+- `index.html` — Punto de entrada. Carga Vue.js 2.5.17 desde CDN y monta una instancia Vue en `#miApp`.
+- `app.js` — Archivo JS independiente con un console.log; actualmente no está vinculado a `index.html`.
+- `style.css` — Hoja de estilos vacía; tampoco está vinculada a `index.html`.
 
-## Running the Project
+## Cómo Ejecutar el Proyecto
 
-Open `index.html` directly in a browser, or serve it with any static file server:
+Abre `index.html` directamente en el navegador, o sírvelo con cualquier servidor de archivos estáticos:
 
 ```bash
 python3 -m http.server 8080
-# then open http://localhost:8080
+# luego abre http://localhost:8080
 ```
 
-## Architecture Notes
+## Notas de Arquitectura
 
-- Vue 2 is loaded from CDN (`vue@2.5.17`), so there is no `npm install` step.
-- The Vue instance is defined inline in `index.html` using `new Vue({ el: '#miApp', data: { mensaje: 'Hola Mundo' } })`.
-- `app.js` and `style.css` are not referenced by `index.html` and would need `<script src="app.js">` / `<link rel="stylesheet" href="style.css">` tags added to take effect.
+- Vue 2 se carga desde CDN (`vue@2.5.17`), por lo que no hay paso de `npm install`.
+- La instancia Vue está definida inline en `index.html` con `new Vue({ el: '#miApp', data: { mensaje: 'Hola Mundo' } })`.
+- `app.js` y `style.css` no están referenciados en `index.html`; para activarlos habría que agregar `<script src="app.js">` y `<link rel="stylesheet" href="style.css">` al HTML.
